@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     let strAlertNumberFalse = "กรุณากรอกเฉพาะตัวเลข"
     
+    let strAlertNotPrime = " ไม่ใช่จำนวนเฉพาะ"
+    
+    let strAlertBePrime = " คือจำนวนเฉพาะ"
+    
     
     
     @IBOutlet weak var NumberTextField: UITextField!
@@ -37,11 +41,44 @@ class ViewController: UIViewController {
             
             if let intNumberFromTextField = Int(strNumberFromTextField) {
                 print("This is Number")
+                
+                // Check Prime
+                if intNumberFromTextField != 1 {
+                // Not 1
+                
+                    var intMyNumber = 2
+                    var bolPrime: Bool = true
+                    
+                    while intMyNumber < intNumberFromTextField {
+                        
+                        if intNumberFromTextField % intMyNumber == 0 {
+                            bolPrime = false
+                            
+                        } // If
+                        
+                        intMyNumber += 1
+                    } // While
+                    
+                    
+                    
+                    if bolPrime {
+                        ResultLabel.text = "\(intNumberFromTextField)" + strAlertBePrime
+                        
+                    } else {
+                        ResultLabel.text = "\(intNumberFromTextField)" + strAlertBePrime
+                    }
+                    
+                    
             } else {
+                    ResultLabel.text = "\(intNumberFromTextField)" + strAlertNotPrime
+            }
+            
+        } else {
                 print("This is Arrtical")
                 ResultLabel.text = strAlertNumberFalse
             }
-            
+        
+        
         } else {
             print("Have Space")
             
@@ -49,6 +86,7 @@ class ViewController: UIViewController {
             
         }// If 1
         
+    
         
     }// Check Button
     
