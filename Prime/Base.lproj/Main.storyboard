@@ -51,6 +51,9 @@
                                 <state key="normal" title="Check">
                                     <color key="titleColor" red="0.36001550444452168" green="1" blue="0.99226741241313077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="CheckButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HZ-0b-3F6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Button For Check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFT-dK-2HB">
                                 <rect key="frame" x="16" y="222" width="343" height="18"/>
@@ -85,6 +88,10 @@
                             <constraint firstItem="Hk4-8a-SWw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yY5-E1-fsT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NumberTextField" destination="UvR-ao-0QK" id="vSv-Xw-eo7"/>
+                        <outlet property="ResultLabel" destination="LFT-dK-2HB" id="1MQ-Dt-Qca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
